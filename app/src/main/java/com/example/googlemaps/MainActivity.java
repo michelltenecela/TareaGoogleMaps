@@ -92,12 +92,12 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onMapClick(@NonNull LatLng latLng) {
-        String nearbySearchUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
+        String Url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
                 "location=" + latLng.latitude + "," + latLng.longitude +
                 "&radius=1500&type=bar" +
                 "&key=" + "AIzaSyC-S81Po-m6s4ZmQmrv4exwBETjuJHXMsg";
 
-        volleyRequest.sendJsonObjectRequest(nearbySearchUrl,
+        volleyRequest.sendJsonObjectRequest(Url,
                 response -> {
                     try {
                         JSONArray results = response.getJSONArray("results");
